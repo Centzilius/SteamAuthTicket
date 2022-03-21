@@ -9,3 +9,5 @@ SteamClient.Init(39210);
 byte[] ticket = SteamUser.GetAuthSessionTicket().Data;
 
 File.WriteAllText(path, Convert.ToBase64String(ticket));
+
+Thread.Sleep(1000*60*10); // sleep for 10 minutes
