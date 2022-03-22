@@ -18,8 +18,6 @@ jobs:
         run: dotnet build --no-restore
       - name: Publish
         run: dotnet publish --no-restore --self-contained --runtime linux-x64 -o output
-      - name: Strip
-        run: strip output/SteamAuthTicket
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
